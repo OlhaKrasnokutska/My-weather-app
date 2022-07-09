@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <title>WeatherApp</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Slab:wght@600&family=Raleway:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="src/project.css" />
+  </head>
+  <body>
+    <div class="container all">
+      <div class="card around">
+        <div class="card-body around">
+          <form>
+            <input
+              type="search"
+              class="form-control"
+              id="searchCity"
+              placeholder="Type a city"
+            />
+            <input type="submit" class="button" id="submit" value="🔍" />
+          </form>
+          <p class="weather-now" id="resultOfSearch">
+            <span id="cCity"></span>
+            <span id="cEmoji"></span>
+            <span id="cTemp"></span>
+            <span id="units">
+              <a href="#" id="celsius-link">°C</a>|
+              <a href="#" id="fahrenheit-link"> °F</a>
+            </span>
+            <span id="cDate">Now</span>
+          </p>
+
+          <div class="card days">
+            <div class="card-body day">
+              <h5 class="card-title">Mon<br />30/05</h5>
+              <p class="card-text">
+                🌧️<br />
+                +14°C<br />
+                +9°C<br />
+              </p>
+            </div>
+          </div>
+
+          <div class="card days">
+            <div class="card-body day">
+              <h5 class="card-title">Tue<br />31/05</h5>
+              <p class="card-text">
+                ☀️<br />
+                +16°C<br />
+                +10°C<br />
+              </p>
+            </div>
+          </div>
+
+          <div class="card days">
+            <div class="card-body day">
+              <h5 class="card-title">Wed<br />01/06</h5>
+              <p class="card-text">
+                🌤️<br />
+                +16°C<br />
+                +11°C<br />
+              </p>
+            </div>
+          </div>
+
+          <div class="card days">
+            <div class="card-body day">
+              <h5 class="card-title">Thu<br />01/06</h5>
+              <p class="card-text">
+                ☁️<br />
+                +17°C<br />
+                +11°C<br />
+              </p>
+            </div>
+          </div>
+
+          <div class="card days">
+            <div class="card-body day">
+              <h5 class="card-title">Fri<br />01/06</h5>
+              <p class="card-text">
+                ⛈️<br />
+                +16°C<br />
+                +12°C<br />
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="src/script.js"></script>
+  </body>
+</html>
