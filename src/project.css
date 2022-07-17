@@ -10,6 +10,18 @@ h5 {
   background-color: #ebf3fb;
 }
 
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+  text-align: left;
+  margin: 0;
+  padding: 0 20px;
+}
+
 .button {
   display: inline;
   margin: 5px 0;
