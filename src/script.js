@@ -77,10 +77,22 @@ let celsiumLink = document.querySelector("#celsius-link");
 celsiumLink.addEventListener("click", convertToCelsium);
 
 function currentTemperature(response) {
+  celsiusTemperature = response.data.main.temp;
   let startTemp = document.querySelector("#cTemp");
   startTemp.innerHTML = Math.round(response.data.main.temp);
   let startCity = document.querySelector("#cCity");
   startCity.innerHTML = response.data.name;
+  let sEmoji = document.querySelector("#cEmoji");
+  sEmoji.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+  let description = document.querySelector("#cDescription");
+  description.innerHTML = response.data.weather[0].description;
+  let humidity = document.querySelector("#humidity");
+  humidity.innerHTML = response.data.main.humidity;
+  let wind = document.querySelector("#wind");
+  wind.innerHTML = response.data.wind.speed;
 }
 
 function logPosition(position) {
