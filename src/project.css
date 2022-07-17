@@ -83,3 +83,13 @@ li {
   font-size: 35px;
   font-family: "Raleway", sans-serif;
 }
+
+.active {
+  color: #006ec5;
+  cursor: default;
+  text-decoration: none;
+}
+
+.active:hover {
+  text-decoration: none;
+}
