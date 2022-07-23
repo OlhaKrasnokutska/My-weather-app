@@ -38,7 +38,7 @@ function formatDate(date) {
   let currentMonth = months[date.getMonth()];
   let currentDate = date.getDate();
 
-  let formattedDate = `${currentHour}:${currentMin} <br/> ${currentDay}, ${currentDate}/${currentMonth}/${currentYear}`;
+  let formattedDate = `${currentHour}:${currentMin} ${currentDay}, ${currentDate}/${currentMonth}/${currentYear}`;
 
   return formattedDate;
 }
