@@ -43,6 +43,53 @@ function formatDate(date) {
   return formattedDate;
 }
 
+function formatDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let day = date.getDay();
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+
+  return days[day];
+}
+
+function displayForecast(response) {
+  let forecast = response.data.daily;
+  console.log(forecast);
+  let forecastElement = document.querySelector("#forecast");
+
+  let forecastHTML = `<div class="row">`;
+  forecast.forEach(function (forecastDay, index) {
+    if (index < 6) {
+      forecastHTML =
+        forecastHTML +
+        `
+  <div class="col-1 card-body day">
+    <h5 class="card-title">${formatDay(forecastDay.dt)}<br />
+    </h5>
+      <p class="card-text">
+        <img src="http://openweathermap.org/img/wn/${
+          forecastDay.weather[0].icon
+        }@2x.png" alt="" width="90"/>
+        <br />
+        <span id="maxTemp">${Math.round(forecastDay.temp.max)}° </span>
+        <br />
+        <span id="minTemp">${Math.round(forecastDay.temp.min)}°</span>
+        <br />
+      </p>
+  </div>
+  `;
+    }
+  });
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
+function getForecast(coordinates) {
+  console.log(coordinates);
+  let apiKey = "7497a8195f7315d98b24229058ab6f42";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayForecast);
+}
+
 function search(event) {
   let input = document.querySelector("#searchCity");
   let date = document.querySelector("#cDate");
@@ -100,6 +147,8 @@ function currentTemperature(response) {
   humidity.innerHTML = response.data.main.humidity;
   let wind = document.querySelector("#wind");
   wind.innerHTML = response.data.wind.speed;
+
+  getForecast(response.data.coord);
 }
 
 function logPosition(position) {
@@ -114,3 +163,4 @@ function logPosition(position) {
 }
 
 navigator.geolocation.getCurrentPosition(logPosition);
+displayForecast();
