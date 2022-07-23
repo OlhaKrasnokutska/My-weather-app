@@ -22,6 +22,10 @@ li {
   padding: 0 20px;
 }
 
+img {
+  background-color: #c4ddf2;
+}
+
 .button {
   display: inline;
   margin: 5px 0;
@@ -33,6 +37,11 @@ li {
   left: -7px;
 }
 
+.card-title {
+  border-color: #b3d4ee;
+  background-color: #f5f9fd;
+}
+
 .card-title.card-text {
   font-family: "Times New Roman", Times, serif;
 }
@@ -42,6 +51,7 @@ li {
   text-align: center;
   color: #006ec5;
   border-radius: 0px;
+  border-width: 0px;
 }
 
 .card.around {
@@ -56,7 +66,9 @@ li {
 
 .day {
   padding: 3px;
+  margin: 10px 10px;
   background-color: #f5f9fd;
+  box-shadow: 1px 1px 5px 1px grey;
 }
 
 .days {
@@ -71,6 +83,7 @@ li {
   background-color: #e0eef8;
   border: 2px solid #66a8dc;
 }
+
 .weather-now {
   text-align: left;
   margin: 10px 25px 10px 20px;
@@ -80,7 +93,7 @@ li {
 
   background-color: #e0eef8;
   color: #006ec5;
-  font-size: 35px;
+  font-size: 25px;
   font-family: "Raleway", sans-serif;
 }
 
