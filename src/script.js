@@ -66,7 +66,7 @@ function displayForecast(response) {
     <h5 class="card-title">${formatDay(forecastDay.dt)}<br />
     </h5>
       <p class="card-text">
-        <img src="http://openweathermap.org/img/wn/${
+        <img src="https://openweathermap.org/img/wn/${
           forecastDay.weather[0].icon
         }@2x.png" alt="" width="90"/>
         <br />
@@ -139,7 +139,7 @@ function currentTemperature(response) {
   let sEmoji = document.querySelector("#cEmoji");
   sEmoji.setAttribute(
     "src",
-    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+    `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
   let description = document.querySelector("#cDescription");
   description.innerHTML = response.data.weather[0].description;
