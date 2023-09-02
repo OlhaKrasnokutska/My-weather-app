@@ -24,6 +24,7 @@ li {
 
 img {
   background-color: #c4ddf2;
+  border: solid 1px #006ec5;
 }
 
 .button {
@@ -62,6 +63,7 @@ img {
 
 .card-body.around {
   margin: 0 auto;
+  background-color: #97dfd9;
 }
 
 .day {
@@ -73,7 +75,7 @@ img {
 
 .days {
   margin: 0 5px;
-  background-color: #fefefe;
+  background-color: #97dfd9;
 }
 
 .form-control {
